@@ -1,4 +1,4 @@
-**Xblaze** Welcome to Our E-Commerce Website,a online marketplace website using Node.js, Express, MongoDB, and bcrypt for password hashing.
+**Xblaze** Welcome to Our E-Commerce Website,an online marketplace website using Node.js, Express, MongoDB, and bcrypt for password hashing.
 
 **Getting Started**
 To view this project on your localhost, follow these steps:
