@@ -1,0 +1,320 @@
+/* all colors */
+:root{
+    --primary:#EEBF00;
+    --secondary:#232B38;
+    --ternary:#6C6C6C;
+    --danger:#FE4545;
+    --pure:#FEFEFE;
+    --light:#c0c0c0;
+    --heaven:#FFFFFF;
+    --footer:#2D333F;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    /* background: linear-gradient(45deg,#87adfe,#ff77cd); */
+}
+.container{
+    width:100%;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+@media (min-width:576px){
+    .container{
+        max-width:540px;
+    }
+}
+
+@media (min-width: 768px){
+    .container{
+        max-width: 720px;
+    }
+}
+@media (min-width: 992px){
+    .container{
+        max-width: 960px;
+    }
+}
+@media (min-width: 1200px){
+    .container{
+        max-width: 1152px;
+    }
+}
+/* from here header starts */
+
+header.topbar{
+    background: var(--secondary);
+    color: var(--pure);
+    font-family: none;
+    padding: 0.75rem 0;
+}
+
+header.topbar .container .icons a{
+    background-color: white;
+    border-radius: 50%;
+    text-decoration: none;
+    padding: 5px;
+    margin: 0.6rem;
+} 
+.p-name{
+    text-decoration: none;
+}
+.p-price{
+    /* align-items: center; */
+    margin-left: 50px;
+    font-weight: bold;
+}
+
+header.topbar .auth .divider{
+    padding: 0 1rem;
+}
+
+header.topbar .auth >div a{
+    color: var(--pure);
+    text-decoration: none;
+}
+header.topbar .auth img{
+    height: 16px;
+    width: 16px;
+    margin-right: 0.35rem;
+}
+header.topbar .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header.topbar .container .auth{
+    display: flex;
+}
+
+/* from here nav bar */
+
+nav .top{
+    padding: 1.5rem 0;
+}
+
+.top .container{
+    display: flex;
+    justify-content: space-between;
+}
+.top .container .contact{
+    display: flex;
+    align-items: center;
+}
+.top .contact h5 , .top .time h5{
+    /* font-family later +contact h6 + time part also */
+    margin-bottom:0.25rem;
+}
+.top .contact h6 , .top .time h4{
+     font-family: none;
+     letter-spacing: 0.055rem;
+     font-size: 0.75rem;
+     color: var(--ternary);
+} 
+
+
+.top .container .time{
+    display: flex;
+    align-items: center;
+}
+
+
+.top .container img{
+    height: 30px;
+    width: 30px;
+    margin-right: 1rem;
+}
+.top .container .logo img{
+    height: 5rem;
+    width: 5rem;
+}
+nav .navbar .container {
+    display: flex;
+    justify-content: center;
+}
+nav .navbar a{
+    text-decoration: none;
+    color: var(--secondary);
+    font-family: none;
+    font-size: 1rem;
+    padding: 1rem 1.5rem;
+    transition: all .3s ease;
+}
+nav .navbar a.active{
+    background: var(--primary);
+    color: var(--pure);
+    border-radius: 4rem;
+    transition: all .3s ease;
+}
+nav .navbar a:hover{
+    background: var(--primary);
+    color: var(--pure);
+    border-radius: 4rem;
+    transition: all .3s ease;
+}
+
+/* shadow feature for nav and small (sm) for image making class */
+.magic-shadow{
+    position: relative;
+    background:var(--heaven) ;
+}
+.magic-shadow:after{
+    content: '';
+    display: block;
+    width: 100%;
+    height: 69px;
+    background-image: url(../icons/shadow.svg) ;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    bottom:-22px;
+    z-index: -1;
+
+}
+.magic-shadow-sm{
+    position: relative;
+    background:var(--heaven) ;
+}
+.magic-shadow-sm:after{
+    content: '';
+    display: block;
+    width: 100%;
+    height: 69px;
+    background-image: url(../icons/shadow-sm.svg) ;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    bottom:-25px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -1;
+
+}
+/* some class which we use many times */
+.flex{
+    display: flex;
+}
+.justify-between{
+    justify-content: space-between;
+}
+.justify-center{
+    justify-content: center;
+}
+.items-center{
+    align-items: center;
+}
+.text-center{
+    text-align: center;
+}
+hr{
+    width: 175px;
+    height: 2px;
+    background-color: #fb774b;
+    /* margin-left: ; */
+}
+h2{
+   margin-left: 500px; 
+}
+.stars img{
+    font-size: 0.8rem;
+    color: gold;
+}
+.stars{
+    padding: 0 10px;
+}
+/* Here starts feature section */
+.mx-auto{
+    width: 365px;
+}
+/* From here product starts */
+.product{
+    cursor: pointer;
+    margin-bottom: 2rem;
+}
+.product img {
+    transition: 0.3s all ;
+    max-height: 250px;
+    max-width: 100%;
+}
+.product:hover img{
+    opacity: 0.8;
+}
+.product .buy-btn{
+    background-color: #fb774b;
+    transform: translateY(20px);
+    opacity: 0;
+    transition: 0.3s all;
+    border: 1px salmon;
+    padding: 2px;
+    border-radius: 4px;
+    color: white;
+}
+.product:hover .buy-btn{
+    
+    transform: translateY(0);
+    opacity: 1;
+    
+}
+#featured > div.row.mx-auto.container > nav > ul > li:nth-child(n):hover>a{
+    background-color: coral;
+    color: white;
+}
+/* from here footer starts */
+footer{
+    background: var(--footer);
+    padding: 2rem 0;
+}
+footer .container{
+    display: flex;
+    color: var(--pure);
+}
+footer .box{
+    flex:1;
+    margin-right: 2rem;
+    text-align: center;
+}
+footer .box ul{
+    list-style-type: none;
+}
+footer .box ul li a{
+    color: var(--pure);
+    text-decoration: none;
+    transition: all .3s ease;
+}
+footer .box ul li a:hover{
+    color: var(--primary);
+}
+footer .box h3{
+    border-bottom: 1px solid var(--primary);
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+}
+footer .box p{
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+footer .box ul li{
+    margin-bottom: 1rem;
+}
+footer .box:nth-child(3) > div{
+    display: flex;
+    justify-content: center;
+}
+footer .box:nth-child(3){
+    text-align: left;
+}
+footer .box:nth-child(3) h3{
+    text-align: center;
+}
+footer .box:nth-child(3) > div img{
+    margin-right: 1rem;
+}
+footer .box:nth-child(3) ul li{
+    margin-bottom: 1.5rem;
+}
+/* footer.copyright{
+    padding: 1rem o;
+    background: var(--secondary);
+    height: 1rem;
+} */

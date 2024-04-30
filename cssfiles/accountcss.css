@@ -1,0 +1,430 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+/* all colors */
+:root{
+    --primary:#EEBF00;
+    --secondary:#232B38;
+    --ternary:#6C6C6C;
+    --danger:#FE4545;
+    --pure:#FEFEFE;
+    --light:#c0c0c0;
+    --heaven:#FFFFFF;
+    --footer:#2D333F;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.container{
+    width:100%;
+    padding: 0 15px;
+    margin: 0 auto;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+@media (min-width:576px){
+    .container{
+        max-width:540px;
+    }
+}
+
+@media (min-width: 768px){
+    .container{
+        max-width: 720px;
+    }
+}
+@media (min-width: 992px){
+    .container{
+        max-width: 960px;
+    }
+}
+@media (min-width: 1200px){
+    .container{
+        max-width: 1152px;
+    }
+}
+
+/* from here header starts */
+
+header.topbar{
+    background: var(--secondary);
+    color: var(--pure);
+    font-family: none;
+    padding: 0.75rem 0;
+}
+
+header.topbar .container .icons a{
+    background-color: white;
+    border-radius: 50%;
+    text-decoration: none;
+    padding: 5px;
+    margin: 0.6rem;
+} 
+
+header.topbar .auth .divider{
+    padding: 0 1rem;
+}
+
+header.topbar .auth >div a{
+    color: var(--pure);
+    text-decoration: none;
+}
+header.topbar .auth img{
+    height: 16px;
+    width: 16px;
+    margin-right: 0.35rem;
+}
+header.topbar .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header.topbar .container .auth{
+    display: flex;
+}
+
+/* from here nav bar */
+
+nav .top{
+    padding: 1.5rem 0;
+}
+
+.top .container{
+    display: flex;
+    justify-content: space-between;
+}
+.top .container .contact{
+    display: flex;
+    align-items: center;
+}
+.top .container .logo img{
+    height: 5rem;
+    width: 5rem;
+}
+.top .contact h5 , .top .time h5{
+    /* font-family later +contact h6 + time part also */
+    margin-bottom:0.25rem;
+}
+.top .contact h6 , .top .time h4{
+     font-family: none;
+     letter-spacing: 0.055rem;
+     font-size: 0.75rem;
+     color: var(--ternary);
+} 
+
+
+.top .container .time{
+    display: flex;
+    align-items: center;
+}
+
+
+.top .container img{
+    height: 30px;
+    width: 30px;
+    margin-right: 1rem;
+}
+
+nav .navbar .container {
+    display: flex;
+    justify-content: center;
+}
+nav .navbar a{
+    text-decoration: none;
+    color: var(--secondary);
+    /* font-family: none; */
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    margin: 1rem;
+    transition: all .3s ease;
+}
+nav .navbar a.active{
+    background: var(--primary);
+    color: var(--pure);
+    border-radius: 1rem;
+    transition: all .3s ease;
+}
+nav .navbar a:hover{
+    background: var(--primary);
+    color: var(--pure);
+    border-radius: 1rem;
+    transition: all .3s ease;
+}
+/* shadow feature for nav and small (sm) for image making class */
+.magic-shadow{
+    position: relative;
+    background:var(--heaven) ;
+}
+
+.magic-shadow:after{
+    content: '';
+    display: block;
+    width: 100%;
+    height: 69px;
+    /* background-image: url(../icons/shadow.svg) ; */
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    bottom:-22px;
+    z-index: -1;
+}
+.magic-shadow-sm{
+    position: relative;
+    background:var(--heaven) ;
+}
+.magic-shadow-sm:after{
+    content: '';
+    display: block;
+    width: 100%;
+    height: 69px;
+    background-image: url(../icons/shadow-sm.svg) ;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    bottom:-25px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -1;
+
+}
+/* navbar finishes */
+.main{
+    background: linear-gradient(45deg,#9fb5e4,#e67dc0);
+    margin-top: 0.3rem;
+    /* padding-top: -10rem; */
+    overflow-x: hidden;
+    overflow-y: hidden;
+    /* margin-bottom: 1rem;  */
+}
+/* For the main content box */
+.container1{
+    background: #fff;
+    /* padding: 1rem; */
+    margin: 1rem;
+    width: 540px;
+    height: 450px;
+    margin: 0 auto;
+    position: relative;
+    margin-top: 10%;
+    margin-bottom: 10%;
+    box-shadow: 2px 5px 20px rgba(119,119,119,.5);
+}
+/* For the side bar */
+.leftbox{
+    float: left;
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 15%;
+    height: 100%;
+    background: rgb(68, 112, 184);
+    box-shadow: 3px 3px 10px rgba(119,119,119,.5);
+    /* border: .1em solid gold; */
+    align-items: center;
+    justify-self: center;
+}
+
+.settings{
+    font-size: 1.2rem;
+    .one{
+        /* padding: 1rem; */
+        input[type="checkbox"] {
+            transform: scale(1.5);
+            margin-right: 5px;
+            /* background-color: #EEBF00; */
+        }
+    }
+}
+
+/* For navigation */
+nav a{
+    list-style: none;
+    padding: 2rem;
+    padding-bottom: 60px;
+    color: #fff;
+    font-weight: 600;
+    font-size: 1.1em;
+    display: block;
+    transition: all .3s ease-in-out;
+}
+nav a:hover{
+    color: gold;
+    cursor: pointer;
+    transform: scale(1.1);
+}
+nav a:first-child{
+    margin-top: 7px;
+}
+nav a.active{
+    color: gold;
+}
+.rightbox{
+    width: 70%;
+    margin-left: 27%;
+}
+.tabshow{
+    transition: all .5s ease-in;
+    width: 80%;
+}
+/* For heading of all pages */
+h1{
+    font-family: 'Poppins',sans-serif;
+    /* color: #086e12; */
+    color: goldenrod;
+    font-size: 1.2rem;  
+    padding-top: 1.2rem;
+    margin-bottom: 0.7rem;
+}
+/* For heading of the data to be filled */
+h2,h3{
+    font-family: 'Poppins',sans-serif;
+    color: #777;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    margin-left: 2px;
+    margin-top: 10px;
+}
+/* For texts */
+input, p{
+    border: 0;
+    border-bottom:1px solid #3fb6a8;
+    width: 90%;
+    font-family: 'Poppins',sans-serif;
+    font-size: .7em;
+    /* padding: -3px 0; */
+    padding: 1rem;    
+    color: #070707;
+    outline: none;
+}
+
+
+#fullname, p{
+    border: 0;
+    border-bottom:1px solid #3fb6a8;
+    width: 80%;
+    font-family: 'Poppins',sans-serif;
+    font-size: .7em;
+    padding: -3px 0;
+    color: #070707;
+    outline: none;
+}
+
+/* For buttons */
+.btn{
+    font-family: 'Poppins',sans-serif;
+    text-transform: uppercase;
+    font-size: 15px;
+    font-weight: 600;
+    border: 0;
+    border-radius: 10px;
+    color: #fff;
+    background: gold;
+    padding: 7px 15px;
+    box-shadow: 4px 5px 4px 0px rgba(0,0,0,.2);
+    cursor: pointer;
+    margin-top: 1.5rem;
+    transition: transform 0.5 ease-in-out;
+}
+
+.btn:hover{
+    color: #070707;
+    background: #9fb5e4;
+    transform: scale(1.05);
+}
+
+.tabshow{
+    display: none;
+    font-size: 1.2rem;
+}
+/* from here footer starts */
+footer{
+    background: var(--footer);
+    padding: 2rem 0;
+}
+footer .container{
+    display: flex;
+    color: var(--primary);
+}
+
+.about{
+    display: flex;
+    flex-direction: column;
+    color: white;
+    font-size: 1.1rem;
+    /* gap: 2rem; */
+    align-items: center;
+    /* position: relative; */
+    justify-content: center;
+}
+.about .head{
+    margin-bottom: 0.8rem;
+}
+
+.about .text{
+    line-height: 2rem;
+    margin-bottom: 0.6rem;
+}
+
+
+.follow{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-self: center;
+}
+
+footer .box{
+    flex:1;
+    margin-right: 2rem;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+footer .box ul{
+    list-style-type: none;
+}
+footer .box ul li a{
+    color: var(--pure);
+    text-decoration: none;
+    transition: transform 0.5s ease;
+}
+footer .box ul li a:hover{
+    color: #618ae1;
+    transform: scale(1.05);
+}
+footer .box h3{
+    /* border-bottom: 1px solid var(--primary); */
+    color: #EEBF00;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+}
+footer .box p{
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+footer .box ul li{
+    margin-bottom: 1rem;
+}
+footer .box:nth-child(3) > div{
+    display: flex;
+    justify-content: center;
+}
+footer .box:nth-child(3){
+    text-align: left;
+}
+footer .box:nth-child(3) h3{
+    text-align: center;
+}
+footer .box:nth-child(3) > div img{
+    margin-right: 1rem;
+}
+footer .box:nth-child(3) ul li{
+    margin-bottom: 1.5rem;
+}
+/* footer.copyright{
+    padding: 1rem o;
+    background: var(--secondary);
+    height: 1rem;
+} */

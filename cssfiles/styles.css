@@ -1,0 +1,214 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    background-size: cover;
+    
+    
+
+  }
+  h1 {
+    text-align: center;
+    font-style: oblique;
+    text-decoration:solid;
+    transform: perspective(100px);
+  }
+
+  .img1{
+    height: 250px;
+    width: 170px;
+    left: -60px;
+    position: relative;
+    clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+    animation: fadeIn 1s ease-in-out;
+  }  
+
+  .img2{
+    height: 250px;
+    width: 170px;
+    left: -100px;
+    position: relative;
+    clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+    animation: fadeIn 1s ease-in-out;
+  }  
+  
+  .img3{
+    height: 250px;
+    width: 170px;
+    left: -140px;
+    position: relative;
+    clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+    animation: fadeIn 1s ease-in-out;
+  }
+  .img4{
+    height: 250px;
+    width: 170px;
+    left: -180px;
+    position: relative;
+    clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+    animation: fadeIn 1s ease-in-out;
+    
+  }
+
+  .img5{
+    height: 250px;
+    width: 170px;
+    left: -220px;
+    position: relative;
+    clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+    animation: fadeIn 1s ease-in-out;
+  }
+
+  .img6{
+    height: 250px;
+    width: 200px;
+    left: -260px;
+    position: relative;
+    clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+    animation: fadeIn 1s ease-in-out;
+  }
+
+  .img7{
+    height: 250px;
+    width: 200px;
+    left: -300px;
+    position: relative;
+    clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+    animation: fadeIn 1s ease-in-out;
+    
+
+  }
+  .img8{
+    height: 250px;
+    width: 200px;
+    left:  -340px;
+    position: relative;
+    clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+    animation: fadeIn 1s ease-in-out;
+
+  }
+  .img9{
+    height: 250px;
+    width: 200px;
+    left: 1100px;
+    top: -255px;
+    position: relative;
+    clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+    animation: fadeIn 1s ease-in-out;
+    
+    
+
+  }
+  .img10{
+    height: 250px;
+    width: 200px;
+    left: 1060px;
+    top: -255px;
+    position: relative;
+    clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+    animation: fadeIn 1s ease-in-out;
+
+  }
+  .img11{
+    height: 250px;
+    width: 190px;
+    left: 1020px;
+    top: -255px;
+    position: relative;
+    clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+    animation: fadeIn 1s ease-in-out;
+
+  }
+  .img11{
+    opacity: 1.0;
+  }
+  
+  img:hover {
+    opacity: 0.5;
+  }
+
+  
+  .container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .contact-info,
+  .contact-form {
+    margin-bottom: 20px;
+  }
+  
+  .contact-info h2,
+  .contact-form h2 {
+    margin-top: 0;
+    color: #333;
+    border-bottom: 2px solid #333;
+    padding-bottom: 5px;
+  }
+  
+  .contact-form .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .contact-form label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+  }
+  
+  .contact-form input,
+  .contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: border-color 0.3s ease;
+  }
+  
+  .contact-form input:focus,
+  .contact-form textarea:focus {
+    border-color: #666;
+  }
+  
+  .contact-form textarea {
+    height: 100px;
+  }
+  
+  .contact-form button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .contact-form button:hover {
+    background-color: #45a049;
+  }
+  
+  @media screen and (max-width: 600px) {
+    .container {
+      padding: 10px;
+    }
+  }
+
+  

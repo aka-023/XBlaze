@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XBlaze</title>
+    <script src="https://kit.fontawesome.com/28f828d15e.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../cssfiles/Shoppage.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  
+    <style>
+        /* CSS for container */
+#imageContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+/* CSS for individual image and label */
+.imageWrapper {
+    margin: 10px;
+    text-align: center;
+    position: relative; /* Needed for relative positioning of buy button */
+    width: calc(25% - 20px); /* 50% width for four images per row */
+}
+
+.imageWrapper img {
+    max-width: 100%; /* Adjust as needed */
+    max-height: 250px; /* Adjust as needed */
+}
+.imageWrapper:hover img{
+    opacity:0.8;
+}
+
+.imageLabel {
+    margin-top: 5px;
+}
+
+.imagePrice {
+    margin-top: 5px;
+    font-weight: bold;
+}
+
+
+.buyButton{
+    background-color: #fb774b;
+    transform: translateY(20px);
+    opacity: 0;
+    transition: 0.3s all;
+    border: 1px salmon;
+    padding: 2px;
+    border-radius: 4px;
+    color: white;
+}
+
+.buyButton:hover{
+    
+    transform: translateY(0);
+    opacity: 1;
+    
+}
+.imageWrapper:hover .buyButton {
+    opacity: 0.8; /* Show button on hover */
+    position: static; /* Reset position to normal */
+    transform: none; /* Reset transform */
+    margin-top: 10px; /* Adjust as needed */
+}
+.show-images-button {
+    background-color: #232B38; /* Green */
+    border: none;
+    color: white;
+    /* padding: 15px 32px; */
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+    width: 200px;
+    height: 30px;
+    margin-left: 42%;
+
+}
+
+
+
+    </style>
+</head>
+<body>
+    <header class="topbar">
+        <div class="container">
+            <div class="icons">
+                <a href="www.facebook.com"><i class="fa-brands fa-facebook"></i></a>
+                <a href="www.instagram.com"><i class="fa-brands fa-instagram"></i></a>
+                <a href="www.twitter.com"><i class="fa-brands fa-twitter"></i></a>
+                <a href="www.googleplus.com"><i class="fa-brands fa-google-plus"></i></a>
+                <a href="www.youtube.com"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+            <div class="auth">
+                <div>
+                    <img src="../icons/user.png" alt="">
+                    <a href="../htmlfiles/signup.html">Logout</a>
+                </div>
+                <span class="divider">|</span>
+                <div>
+                    <img src="../icons/shopping-cart.png" alt="">
+                    <a href="../htmlfiles/cart.html">Cart</a>
+                </div>
+                
+            </div>
+        </div>
+    </header>
+
+    <nav>
+        <div class="top">
+            <div class="container">
+                <div class="contact">
+                    <img src="../icons/callicon.svg" alt="">
+                    <div>
+                        <h5>Call Us: (+91)4546551514 </h5>
+                        <h6>E-mail : xblaze2024@gmail.com</h6>
+                    </div>
+                </div>
+                <div class="logo">
+                    <img src="../Images/vblaze-logo.png" alt="XBlaze">
+                </div>
+                <div class="time">
+                    <img src="../icons/clockicon.svg" alt="">
+                    <div>
+                        <h5>Working Hours :</h5>
+                        <h4>24*7</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="navbar magic-shadow">
+            <div class="container">
+                <a href="../htmlfiles/home.html">Home</a>
+                <a href="../htmlfiles/About_Us.html">About Us</a>
+                <a href="#" class="active">Shop</a>
+                <a href="../htmlfiles/contact.html">Contact Us</a>
+                <a href="../htmlfiles/account.html">Profile</a>
+            </div>
+        </div>
+    </nav>
+    <section id="featured" class="my-5 py-5">
+        <div class="py-3 mb-5 container">
+            <h2 class="font-weight-bold mx-auto">Our Features</h2>
+            <!-- <hr class="mx-auto"> -->
+            <p class="mx-auto">Here you can Check out our new products with fair price</p>
+        </div>
+        <div class="row mx-auto container">
+            <div class="product col-lg-3 col-md-4 col-12">
+                <img class="img-fluid mb-3" src="../Images/dresscolor1.webp" alt="">                <div class="stars flex justify-center items-center">
+                    <img src="../icons/star-filled.svg" alt="">
+                    <img src="../icons/star-filled.svg" alt="">
+                    <img src="../icons/star-filled.svg" alt="">
+                    <img src="../icons/star-filled.svg" alt="">
+                    <img src="../icons/star-grey.svg" alt="">
+                </div>
+                <h6 class="p-name">Trendy Glamorous Women Dresses</h6>
+                <h6 class="p-price">Price: ₹559</h6>
+                <a href="../htmlfiles/product1.html"><button class="buy-btn">Buy Now</button></a>
+            </div>
+            <div class="product col-lg-3 col-md-4 col-12">
+                <img class="img-fluid mb-3" src="../Images/dress1col1.avif" alt="">                <div class="stars flex justify-center items-center">
+                    <img src="../icons/star-filled.svg" alt="">
+                    <img src="../icons/star-filled.svg" alt="">
+                    <img src="../icons/star-filled.svg" alt="">
+                    <img src="../icons/star-filled.svg" alt="">
+                    <img src="../icons/star-grey.svg" alt="">
+                </div>
+                <h6 class="p-name">Women A-line Multicolor Dress</h6>
+                <h6 class="p-price">Price: ₹699</h6>
+                <a href="../htmlfiles/product2.html"><button class="buy-btn">Buy Now</button></a>
+            </div>
+            <div class="product col-lg-3 col-md-4 col-12">
+                <img class="img-fluid mb-3" src="../Images/dress2col1.webp" alt="">                <div class="stars flex justify-center items-center">
+                    <img src="../icons/star-filled.svg" alt="">
+                    <img src="../icons/star-filled.svg" alt="">
+                    <img src="../icons/star-filled.svg" alt="">
+                    <img src="../icons/star-filled.svg" alt="">
+                    <img src="../icons/star-grey.svg" alt="">
+                </div>
+                <h6 class="p-name">Women Empire Waist Maroon Dress</h6>
+                <h6 class="p-price">Price: ₹479</h6>
+                <a href="../htmlfiles/product3.html"><button class="buy-btn">Buy Now</button></a>
+            </div>
+            <div class="product col-lg-3 col-md-4 col-12">
+                <img class="img-fluid mb-3" src="../Images/dress3col1.webp" alt="">                <div class="stars flex justify-center items-center">
+                    <img src="../icons/star-filled.svg" alt="">
+                    <img src="../icons/star-filled.svg" alt="">
+                    <img src="../icons/star-filled.svg" alt="">
+                    <img src="../icons/star-filled.svg" alt="">
+                    <img src="../icons/star-grey.svg" alt="">
+                </div>
+                <h6 class="p-name">Clip Dot Flutter Sleeve Midi Dress</h6>
+                <h6 class="p-price">Price: ₹399</h6>
+                <!-- <button class="buy-btn">Buy Now</button> -->
+                <a href="../htmlfiles/product4.html"><button class="buy-btn">Buy Now</button></a>
+            </div>
+            <div class="product col-lg-3 col-md-4 col-12">
+                <img class="img-fluid mb-3" src="../Images/dress4col1.avif" alt="">                <div class="stars flex justify-center items-center">
+                    <img src="../icons/star-filled.svg" alt="">
+                    <img src="../icons/star-filled.svg" alt="">
+                    <img src="../icons/star-filled.svg" alt="">
+                    <img src="../icons/star-filled.svg" alt="">
+                    <img src="../icons/star-grey.svg" alt="">
+                </div>
+                <h6 class="p-name">PU For Spaghetti Strap Sweetheart Neckline A-Line Dress</h6>
+                <h6 class="p-price">Price: ₹419</h6>
+                <a href="../htmlfiles/product5.html"><button class="buy-btn">Buy Now</button></a>
+            </div>
+            <div class="product col-lg-3 col-md-4 col-12">
+                <img class="img-fluid mb-3" src="../Images/dress5col1.jpeg" alt="">                <div class="stars flex justify-center items-center">
+                    <img src="../icons/star-filled.svg" alt="">
+                    <img src="../icons/star-filled.svg" alt="">
+                    <img src="../icons/star-filled.svg" alt="">
+                    <img src="../icons/star-filled.svg" alt="">
+                    <img src="../icons/star-grey.svg" alt="">
+                </div>
+                <h6 class="p-name">Fashion Plus Size Dress Women Short Sleeve Asymmetric Hem Waist Tight Swing Mid Length Evening Dress</h6>
+                <h6 class="p-price">Price: ₹749</h6>
+                <a href="../htmlfiles/product6.html"><button class="buy-btn">Buy Now</button></a>
+            </div>
+            <div class="product col-lg-3 col-md-4 col-12">
+                <img class="img-fluid mb-3" src="../Images/dress6col1.jpeg" alt="">                <div class="stars flex justify-center items-center">
+                    <img src="../icons/star-filled.svg" alt="">
+                    <img src="../icons/star-filled.svg" alt="">
+                    <img src="../icons/star-filled.svg" alt="">
+                    <img src="../icons/star-filled.svg" alt="">
+                    <img src="../icons/star-grey.svg" alt="">
+                </div>
+                <h6 class="p-name">KRISTINE MAXI DRESS 2 WAY with SLIT on SIDE Fashionable & Fabulous</h6>
+                <h6 class="p-price">Price: ₹399</h6>
+                <a href="../htmlfiles/product7.html"><button class="buy-btn">Buy Now</button></a>
+            </div>
+            <div class="product col-lg-3 col-md-4 col-12">
+                <img class="img-fluid mb-3" src="../Images/dress7col1.jpg" alt="">                <div class="stars flex justify-center items-center">
+                    <img src="../icons/star-filled.svg" alt="">
+                    <img src="../icons/star-filled.svg" alt="">
+                    <img src="../icons/star-filled.svg" alt="">
+                    <img src="../icons/star-filled.svg" alt="">
+                    <img src="../icons/star-grey.svg" alt="">
+                </div>
+                <h6 class="p-name">Designer latest design lunching new Indian Pakistani Bollywood Designer Gown Indian dress Dupatta Traditional Gown's</h6>
+                <h6 class="p-price">Price: ₹499</h6>
+                <a href="../htmlfiles/product8.html"><button class="buy-btn">Buy Now</button></a>
+            </div>
+            <div class="product col-lg-3 col-md-4 col-12">
+                <img class="img-fluid mb-3" src="../Images/dress8col1.webp" alt="">                <div class="stars flex justify-center items-center">
+                    <img src="../icons/star-filled.svg" alt="">
+                    <img src="../icons/star-filled.svg" alt="">
+                    <img src="../icons/star-filled.svg" alt="">
+                    <img src="../icons/star-filled.svg" alt="">
+                    <img src="../icons/star-grey.svg" alt="">
+                </div>
+                <h6 class="p-name">YELLOW BLAZER WITH CROP TOP & PALAZZO</h6>
+                <h6 class="p-price">Price: ₹539</h6>
+                <a href="../htmlfiles/product9.html"><button class="buy-btn">Buy Now</button></a>
+            </div>
+            <div class="product col-lg-3 col-md-4 col-12">
+                <img class="img-fluid mb-3" src="../Images/dress9col1.jpg" alt="">                <div class="stars flex justify-center items-center">
+                    <img src="../icons/star-filled.svg" alt="">
+                    <img src="../icons/star-filled.svg" alt="">
+                    <img src="../icons/star-filled.svg" alt="">
+                    <img src="../icons/star-filled.svg" alt="">
+                    <img src="../icons/star-grey.svg" alt="">
+                </div>
+                <h6 class="p-name">Necktar Women's Modern Georgette Regular Woven Round Neck Full Sleeve Pull On Fantasy Solid Kurti</h6>
+                <h6 class="p-price">Price: ₹669</h6>
+                <a href="../htmlfiles/product10.html"><button class="buy-btn">Buy Now</button></a>
+            </div>
+            <div class="product col-lg-3 col-md-4 col-12">
+                <img class="img-fluid mb-3" src="../Images/dress10col1.webp" alt="">                <div class="stars flex justify-center items-center">
+                    <img src="../icons/star-filled.svg" alt="">
+                    <img src="../icons/star-filled.svg" alt="">
+                    <img src="../icons/star-filled.svg" alt="">
+                    <img src="../icons/star-filled.svg" alt="">
+                    <img src="../icons/star-grey.svg" alt="">
+                </div>
+                <h6 class="p-name">Women's Stylish Western Party Wear Dress</h6>
+                <h6 class="p-price">Price: ₹999</h6>
+                <a href="../htmlfiles/product11.html"><button class="buy-btn">Buy Now</button></a>
+            </div>
+            <div class="product col-lg-3 col-md-4 col-12">
+                <img class="img-fluid mb-3" src="../Images/dress11col1.jpg" alt="">                <div class="stars flex justify-center items-center">
+                    <img src="../icons/star-filled.svg" alt="">
+                    <img src="../icons/star-filled.svg" alt="">
+                    <img src="../icons/star-filled.svg" alt="">
+                    <img src="../icons/star-filled.svg" alt="">
+                    <img src="../icons/star-grey.svg" alt="">
+                </div>
+                <h6 class="p-name">Florence Women Dress</h6>
+                <h6 class="p-price">Price: ₹569</h6>
+                <a href="../htmlfiles/product12.html"><button class="buy-btn">Buy Now</button></a>
+            </div>
+
+            
+   <!-- <h1>Show Images</h1> -->
+    <button onclick="showImages()" id = "butta" class="show-images-button">Load More</button>
+    <div id="imageContainer"></div>
+    <div id="decodedImageContainer"></div>
+
+    <script>
+      function showImages() {
+    // Hide the show image button
+    var showImagesButton = document.querySelector('button');
+    showImagesButton.style.display = 'none';
+
+    var buttonToRemove = document.getElementById('butta');
+    if (buttonToRemove) {
+        buttonToRemove.remove();
+    }
+
+    fetch('/getAllImages')
+        .then(response => response.json())
+        .then(data => {
+            var imageContainer = document.getElementById('imageContainer');
+            imageContainer.innerHTML = ''; // Clear previous images
+
+            var totalImages = data.images.length;
+            var loadedImages = 0;
+
+            data.images.forEach(imageData => {
+                var base64Data = imageData.image.split(',')[1];
+                
+                var imageWrapper = document.createElement('div');
+                imageWrapper.classList.add('imageWrapper');
+
+                var img = document.createElement('img');
+                img.src = 'data:image/jpeg;base64,' + base64Data;
+                img.alt = 'Image';
+
+                var name = document.createElement('div');
+                name.classList.add('imageLabel');
+                name.textContent = imageData.name; // Assuming there's a 'name' field in your image data
+
+                var price = document.createElement('div');
+                price.classList.add('imagePrice');
+                price.textContent = 'Price: ₹' + imageData.price; // Assuming there's a 'price' field in your image data
+
+                var buyButton = document.createElement('button');
+                buyButton.classList.add('buyButton');
+                buyButton.textContent = 'Buy Now';
+
+                imageWrapper.appendChild(img);
+                imageWrapper.appendChild(name);
+                imageWrapper.appendChild(price);
+                imageWrapper.appendChild(buyButton);
+                imageContainer.appendChild(imageWrapper);
+
+                // Increment the count of loaded images
+                loadedImages++;
+
+                // Check if all images are loaded
+                if (loadedImages === totalImages) {
+                    // Hide the show image button
+                    showImagesButton.style.display = 'none';
+                }
+            });
+        })
+        .catch(error => {
+            console.error('Error fetching images:', error);
+            // Show the show image button again in case of error
+            showImagesButton.style.display = 'block';
+        });
+}
+
+
+
+    </script>
+
+
+
+            <!-- <nav aria-label="...">
+                <ul class="pagination">
+                  <li class="page-item disabled">
+                    <a class="page-link">Previous</a>
+                  </li>
+                  <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                  <li class="page-item" aria-current="page">
+                    <a class="page-link" href="#">2</a>
+                  </li>
+                  <li class="page-item"><a class="page-link" href="#">3</a></li>
+                  <li class="page-item">
+                    <a class="page-link" href="#">Next</a>
+                  </li>
+                </ul>
+              </nav> -->
+        </div>
+    </section>
+    
+    <footer>
+        <div class="container">
+            <div class="box">
+                <h3>About Us</h3>
+                 <p>This platform offering a wide range of products for convenient online shopping.</p>
+                 <button class="btn btn-secondary">Read More</button>
+            </div>
+            <div class="box">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li>
+                        <a href="../htmlfiles/home.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="#">Shop</a>
+                    </li>
+                    <li>
+                        <a href="../htmlfiles/contact.html">Contact Us</a>
+                    </li>
+                    <li>
+                        <a href="../htmlfiles/account.html">Profile</a>
+                    </li>
+                    <li>
+                        <a href="../htmlfiles/About_Us.html">About Us</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="box">
+                <h3>Follow Us</h3>
+                <ul>
+                    <li>
+                        <a href="www.facebook.com">
+                            <img src="../icons/facebook.svg" alt="">
+                            <span>Facebook</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="www.twitter.com">
+                            <img src="../icons/twitter.svg" alt="">
+                            <span>Twitter</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="www.google.com">
+                            <img src="../icons/google.svg" alt="">
+                            <span>Google</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="www.instagram.com">
+                            <img src="../icons/instagram.svg" alt="">
+                            <span>Instagram</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <footer class="Copyright">
+        
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>

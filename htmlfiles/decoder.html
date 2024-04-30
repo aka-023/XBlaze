@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Base64 Image Decoder</title>
+    <style>
+        #imageInput {
+            width: 100%;
+            margin-bottom: 10px;
+        }
+        #decodedImage {
+            max-width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <h1>Base64 Image Decoder</h1>
+    <textarea id="imageInput" rows="10" placeholder="Paste your Base64 image string here..."></textarea>
+    <button onclick="decodeImage()">Decode Image</button>
+    <div id="decodedImageContainer"></div>
+
+    <script>
+        function decodeImage() {
+            var input = document.getElementById('imageInput').value.trim();
+            if (input === '') {
+                alert('Please enter a Base64 image string.');
+                return;
+            }
+
+            var decodedImage = document.createElement('img');
+            decodedImage.id = 'decodedImage';
+            decodedImage.src = 'data:image/jpeg;base64,' + input;
+
+            var decodedImageContainer = document.getElementById('decodedImageContainer');
+            decodedImageContainer.innerHTML = ''; // Clear previous image
+            decodedImageContainer.appendChild(decodedImage);
+        }
+    </script>
+</body>
+</html>

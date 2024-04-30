@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+}
+/* For whole body structure */
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background:#55585f;
+    /* background: linear-gradient(45deg,#87adfe,#ff77cd); */
+    overflow: hidden;
+}
+/* For the whole form box */
+.wrapper{
+    position: relative;
+    width: 400px;
+    height: 500px;
+    /* overflow-y: auto; */
+    /* background: #ff77cd; */
+    background: #232B38;
+    /* background: linear-gradient(45deg,#1d50be,#a01c70); */
+    /* box-shadow: 0 0 50px #0ef; */
+    border-radius: 20px;
+    padding: 40px;
+    overflow: hidden;
+}
+.wrapper:hover{
+    animation: animate 1s linear infinite;
+}
+
+/* For the form */
+.form-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    transition: 1s ease-in-out;
+}
+.form-wrapper.sign-up {
+    display: none;
+}
+.wrapper.active .form-wrapper.sign-in{
+    transform: translateY(-450px);
+}
+.wrapper .form-wrapper.sign-up{
+    position: absolute;
+    top: 450px;
+    left: 0;
+
+}
+.wrapper.active .form-wrapper.sign-up{
+    transform: translateY(-450px);
+}
+/* For heading of the form */
+h2{
+    font-size: 30px;
+    color: #fff;
+    text-align: center;
+}
+/* For input boxes */
+.input-group{
+    position: relative;
+    margin: 30px 0;
+    border-bottom: 2px solid #fff;
+}
+/* For text of inputs */
+.input-group label{
+   position: absolute;
+   left: 5px;
+   font-size: 16px;
+   color: #fff;
+   pointer-events: none;
+   transition: .5s;
+}
+/* For input boxes */
+.input-group input{
+    width: 320px;
+    height: 40px;
+    font-size: 16px;
+    color: #fff;
+    padding: 0 5px;
+    background: transparent;
+    border: none;
+    outline: none;
+}
+.input-group input:focus~label,
+.input-group input:valid~label{
+    top: -20px;
+}
+/* For remember */
+.remember{
+    margin: -5px 0 15px 5px;
+}
+.remember label{
+    color: #fff;
+    font-size: 14px; 
+}
+/* For Checkbox */
+/* .remember label input{
+    accent-color: #0ef;
+} */
+/* For login button */
+button{
+    position: relative;
+    margin-bottom: 20px;
+    width: 100%;
+    height: 40px;
+    background: rgb(0, 191, 255);
+    box-shadow: 0 0 10px #0ef;
+    font-size: 16px;
+    color: #000;
+    font-weight: 500;
+    cursor: pointer;
+    border-radius: 30px;
+    border: none;
+    outline: none;
+}
+/* For text below login button */
+.signUp-link{
+    font-size: 14px;
+    text-align: center;
+    margin: 15px 0;
+}
+.signUp-link p{
+    color: #fff;
+    /* font-size: 16px; */
+}
+/* For sign up link */
+.signUp-link p a{
+    color: #0ef;
+    text-decoration: none;
+    font-weight: 500;
+}
+.signUp-link p a:hover{
+    text-decoration: underline;
+}

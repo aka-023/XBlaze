@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show Images</title>
+    <style>
+        /* CSS for container */
+        #imageContainer {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            align-items: center;
+        }
+
+        /* CSS for individual image and label */
+        .imageWrapper {
+            margin: 10px;
+            text-align: center;
+            width: calc(25% - 20px); /* 50% width for four images per row */
+            box-sizing: border-box;
+        }
+
+        .imageWrapper img {
+            max-width: 100%; /* Adjust as needed */
+            max-height: 200px; /* Adjust as needed */
+        }
+
+        .imageLabel {
+            margin-top: 5px;
+        }
+
+        .imagePrice {
+            margin-top: 5px;
+            font-weight: bold;
+        }
+
+        .buyButton {
+            margin-top: 10px;
+            background-color: #fb774b;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .buyButton:hover {
+            background-color: #ff9a67;
+        }
+    </style>
+</head>
+<body>
+    <h1>Show Images</h1>
+    <button onclick="showImages()">Show Images</button>
+    <div id="imageContainer">Mujra</div>
+    <div id="decodedImageContainer"></div>
+
+    <script>
+        function showImages() {
+            fetch('/getAllImages')
+                .then(response => response.json())
+                .then(data => {
+                    var imageContainer = document.getElementById('imageContainer');
+                    imageContainer.innerHTML = ''; // Clear previous images
+
+                    data.images.forEach(imageData => {
+                        var base64Data = imageData.image.split(',')[1];
+                        
+                        var imageWrapper = document.createElement('div');
+                        imageWrapper.classList.add('imageWrapper');
+
+                        var img = document.createElement('img');
+                        img.src = 'data:image/jpeg;base64,' + base64Data;
+                        img.alt = 'Image';
+
+                        var name = document.createElement('div');
+                        name.classList.add('imageLabel');
+                        name.textContent = imageData.name; // Assuming there's a 'name' field in your image data
+
+                        var price = document.createElement('div');
+                        price.classList.add('imagePrice');
+                        price.textContent = 'Price: $' + imageData.price; // Assuming there's a 'price' field in your image data
+
+                        var buyButton = document.createElement('button');
+                        buyButton.classList.add('buyButton');
+                        buyButton.textContent = 'Buy Now';
+
+                        imageWrapper.appendChild(img);
+                        imageWrapper.appendChild(name);
+                        imageWrapper.appendChild(price);
+                        imageWrapper.appendChild(buyButton);
+                        imageContainer.appendChild(imageWrapper);
+                    });
+                })
+                .catch(error => console.error('Error fetching images:', error));
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KKR Image</title>
+</head>
+<body>
+    <h1>KKR Image</h1>
+    <img id="logo" src="dress3.jpeg" alt="KKR Logo">
+    <form id="imageForm" action="/storeImage" method="POST">
+        <input type="submit" value="Submit">
+    </form>
+    <button id="showImagesBtn">Show Images</button>
+    <div id="imageContainer"></div>
+
+    <script>
+        document.getElementById('imageForm').addEventListener('submit', function(event) {
+            event.preventDefault(); 
+
+            var logoImage = document.getElementById('logo');
+            var canvas = document.createElement('canvas');
+            canvas.width = logoImage.width;
+            canvas.height = logoImage.height;
+            var ctx = canvas.getContext('2d');
+            ctx.drawImage(logoImage, 0, 0);
+
+            var imageData = canvas.toDataURL(); 
+
+            var hiddenInput = document.createElement('input');
+            hiddenInput.type = 'hidden';
+            hiddenInput.name = 'imageData';
+            hiddenInput.value = imageData;
+            this.appendChild(hiddenInput);
+
+            this.submit();
+        });
+
+        document.getElementById('showImagesBtn').addEventListener('click', function() {
+            fetch('/getImages')
+                .then(response => response.json())
+                .then(data => {
+                    var imageContainer = document.getElementById('imageContainer');
+                    imageContainer.innerHTML = ''; 
+
+                    data.forEach(image => {
+                        var img = document.createElement('img');
+                        img.src = 'data:image/jpeg;base64,' + image.image; 
+                        img.alt = 'Image';
+                        imageContainer.appendChild(img);
+                    });
+                })
+                .catch(error => console.error('Error fetching images:', error));
+        });
+    </script>
+</body>
+</html>

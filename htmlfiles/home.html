@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../cssfiles/home1.css">
+    <title>XBlaze</title>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <script src="https://kit.fontawesome.com/28f828d15e.js" crossorigin="anonymous"></script>
+   
+</head>
+<body>
+    <header class="topbar">
+        <div class="container">
+            <div class="icons">
+                <a href="www.facebook.com"><i class="fa-brands fa-facebook"></i></a>
+                <a href="www.instagram.com"><i class="fa-brands fa-instagram"></i></a>
+                <a href="www.twitter.com"><i class="fa-brands fa-twitter"></i></a>
+                <a href="www.googleplus.com"><i class="fa-brands fa-google-plus"></i></a>
+                <a href="www.youtube.com"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+            <div class="auth">
+                <div>
+                    <img src="../icons/user.png" alt="">
+                    <a href="../htmlfiles/signup.html">Logout</a>
+                </div>
+                <span class="divider">|</span>
+                <div>
+                    <img src="../icons/shopping-cart.png" alt="">
+                    <a href="../htmlfiles/cart.html">Cart</a>
+                </div>
+                
+            </div>
+        </div>
+    </header>
+
+    <nav>
+        <div class="top">
+            <div class="container">
+                <div class="contact">
+                    <img src="../icons/callicon.svg" alt="">
+                    <div>
+                        <h5>Call Us: (+91)4546551514 </h5>
+                        <h6>E-mail : xblaze2024@gmail.com</h6>
+                    </div>
+                </div>
+                <div class="logo">
+                    <img src="../Images/vblaze-logo.png" alt="XBlaze">
+                </div>
+                <div class="time">
+                    <img src="../icons/clockicon.svg" alt="">
+                    <div>
+                        <h5>Working Hours :</h5>
+                        <h4>24*7</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="navbar magic-shadow">
+            <div class="container">
+                <a href="../htmlfiles/home.html" class="active">Home</a>
+                <a href="../htmlfiles/About_Us.html">About Us</a>
+                <a href="../htmlfiles/Shoppage.html">Shop</a>
+                <a href="../htmlfiles/contact.html">Contact Us</a>
+                <a href="../htmlfiles/account.html">Profile</a>
+            </div>
+        </div>
+    </nav>
+    <header class="hero flex items-center">
+        <div class="container">
+            <div class="welcome flex items-center">
+                Welcome To <span>XBlaze</span>
+                <!-- <img src="../Images/vblaze-logo.png" alt="logo"> -->
+            </div>
+            <h1>Explore the <span>Fashion</span> Ongoing</h1>
+            <p>Whether you're seeking everyday essentials or statement pieces, we have something for every taste and preference.</p>
+            <div>
+                <button class="btn btn-primary">
+                    <a href="../htmlfiles/About_Us.html">Read More</a>
+                </button>
+                <button class="btn btn-secondary">
+                    <a href="../htmlfiles/Shoppage.html">Shop Now</a>
+                </button>   
+            </div>
+            <div class="hero-image">
+                <img src="../Images/heroimage.png" alt="">
+            </div>
+        </div>
+
+    </header>
+
+    <section class="top-products">
+        <div class="container ">
+            <h1 class="section-heading">Top Products</h1>
+            <div class="slider">
+                <button class="slider-btn prev-btn">
+                    <img src="../icons/pre.svg" alt="">
+                </button>
+                <button class="slider-btn next-btn">
+                    <img src="../icons/next.svg" alt="">
+                </button>
+                <div class="clothes-slider flex">
+                    <div class="cloth-card magic-shadow-sm">
+                        <div class="product-image flex items-center justify-center">
+                            <a href="../htmlfiles/product1.html">
+                                <img id="productImage" src="../Images/dresscolor1.webp" alt="">
+                            </a>
+                        </div>
+                        <hr>
+                        <div>
+                            <h3 class="add text-center">Trendy Glamorous Women Dresses</h3>
+                            <div class="stars flex justify-center items-center">
+                                <img src="../icons/star-filled.svg" alt="">
+                                <img src="../icons/star-filled.svg" alt="">
+                                <img src="../icons/star-filled.svg" alt="">
+                                <img src="../icons/star-filled.svg" alt="">
+                                <img src="../icons/star-grey.svg" alt="">
+                            </div>
+                            <div class="price text-center">
+                                Price: ₹559
+                            </div>
+                            <div class="flex justify-center">
+                                <button onclick="addToCart()">
+                                    <img src="../icons/cart-2.svg" alt="">
+                                    <span>Add to Cart</span>
+                                </button>
+                                <div id="toast" class="hidden">The product has been added to cart</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cloth-card magic-shadow-sm">
+                        <div class="product-image flex items-center justify-center">
+                            <a href="../htmlfiles/product6.html">
+                                <img id="productImage" src="../Images/dress8col1.webp" alt="">
+                            </a>
+                        </div>
+                        <hr>
+                        <div>
+                            <h3 class="text-center">Fashion Plus Size Dress Women Short Sleeve Asymmetric Hem Waist Tight Swing Mid Length Evening Dress</h3>
+                            <div class="stars flex justify-center items-center">
+                                <img src="../icons/star-filled.svg" alt="">
+                                <img src="../icons/star-filled.svg" alt="">
+                                <img src="../icons/star-filled.svg" alt="">
+                                <img src="../icons/star-filled.svg" alt="">
+                                <img src="../icons/star-grey.svg" alt="">
+                            </div>
+                            <div class="price text-center">
+                                Price: ₹749
+                            </div>
+                            <div class="flex justify-center">
+                                <button onclick="addToCart()">
+                                    <img src="../icons/cart-2.svg" alt="">
+                                    <span>Add to Cart</span>
+                                </button>
+                                <div id="toast" class="hidden">The product has been added to cart</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cloth-card magic-shadow-sm">
+                        <div class="product-image flex items-center justify-center">
+                            <a href="../htmlfiles/product9.html">
+                                <img id="productImage" src="../Images/dress9col1.jpg" alt="">
+                            </a>
+                        </div>
+                        <hr>
+                        <div>
+                            <h3 class="text-center">YELLOW BLAZER WITH CROP TOP & PALAZZO</h3>
+                            <div class="stars flex justify-center items-center">
+                                <img src="../icons/star-filled.svg" alt="">
+                                <img src="../icons/star-filled.svg" alt="">
+                                <img src="../icons/star-filled.svg" alt="">
+                                <img src="../icons/star-filled.svg" alt="">
+                                <img src="../icons/star-grey.svg" alt="">
+                            </div>
+                            <div class="price text-center">
+                                Price: ₹539
+                            </div>
+                            <div class="flex justify-center">
+                                <button onclick="addToCart()">
+                                    <img src="../icons/cart-2.svg" alt="">
+                                    <span>Add to Cart</span>
+                                </button>
+                                <div id="toast" class="hidden">The product has been added to cart</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cloth-card magic-shadow-sm">
+                        <div class="product-image flex items-center justify-center">
+                            <a href="../htmlfiles/product10.html">
+                                <img id="productImage" src="../Images/dress5col1.jpeg" alt="">
+                            </a>
+                        </div>
+                        <hr>
+                        <div>
+                            <h3 class="text-center">Necktar Women's Modern Georgette Regular Woven Round Neck Full Sleeve Pull On Fantasy Solid Kurti</h3>
+                            <div class="stars flex justify-center items-center">
+                                <img src="../icons/star-filled.svg" alt="">
+                                <img src="../icons/star-filled.svg" alt="">
+                                <img src="../icons/star-filled.svg" alt="">
+                                <img src="../icons/star-filled.svg" alt="">
+                                <img src="../icons/star-grey.svg" alt="">
+                            </div>
+                            <div class="price text-center">
+                                Price: ₹669
+                            </div>
+                            <div class="flex justify-center">
+                                <button onclick="addToCart()">
+                                    <img src="../icons/cart-2.svg" alt="">
+                                    <span>Add to Cart</span>
+                                </button>
+                                <div id="toast" class="hidden">The product has been added to cart</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cloth-card magic-shadow-sm">
+                        <div class="product-image flex items-center justify-center">
+                            <a href="../htmlfiles/product2.html">
+                                <img id="productImage" src="../Images/dress1col1.avif" alt="">
+                            </a>
+                        </div>
+                        <hr>
+                        <div>
+                            <h3 class="text-center">Women A-line Multicolor Dress</h3>
+                            <div class="stars flex justify-center items-center">
+                                <img src="../icons/star-filled.svg" alt="">
+                                <img src="../icons/star-filled.svg" alt="">
+                                <img src="../icons/star-filled.svg" alt="">
+                                <img src="../icons/star-filled.svg" alt="">
+                                <img src="../icons/star-grey.svg" alt="">
+                            </div>
+                            <div class="price text-center">
+                                Price: ₹699
+                            </div>
+                            <div class="flex justify-center">
+                                <button onclick="addToCart()">
+                                    <img src="../icons/cart-2.svg" alt="">
+                                    <span>Add to Cart</span>
+                                </button>
+                                <div id="toast" class="hidden">The product has been added to cart</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cloth-card magic-shadow-sm">
+                        <div class="product-image flex items-center justify-center">
+                            <a href="../htmlfiles/product3.html">
+                                <img id="productImage" src="../Images/dress2col1.webp" alt="">
+                            </a>
+                        </div>
+                        <hr>
+                        <div>
+                            <h3 class="text-center">Women Empire Waist Maroon Dress</h3>
+                            <div class="stars flex justify-center items-center">
+                                <img src="../icons/star-filled.svg" alt="">
+                                <img src="../icons/star-filled.svg" alt="">
+                                <img src="../icons/star-filled.svg" alt="">
+                                <img src="../icons/star-filled.svg" alt="">
+                                <img src="../icons/star-grey.svg" alt="">
+                            </div>
+                            <div class="price text-center">
+                                Price: ₹479
+                            </div>
+                            <div class="flex justify-center">
+                                <button onclick="addToCart()">
+                                    <img src="../icons/cart-2.svg" alt="">
+                                    <span>Add to Cart</span>
+                                </button>
+                                <div id="toast" class="hidden">The product has been added to cart</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center btn-wrapper">
+                <button class="btn btn-secondary">
+                    <a href="../htmlfiles/Shoppage.html" class="view_more_btn">View More</a></button>
+            </div>
+        </div>
+    </section>
+    <section class="big-deal">
+        <div class="container">
+            <h1 class="section-heading text-pure">Big Deals of The Year</h1>
+            <div class="timer flex">
+                <div>
+                    <span id="day">02</span>
+                    <span>Days</span>
+                </div>
+                <div>
+                    <span id="hrs">24</span>
+                    <span>Hours</span>
+                </div>
+                <div>
+                    <span id="mins">55</span>
+                    <span>Minutes</span>
+                </div>
+                <div>
+                    <span id="sec">50</span>
+                    <span>Seconds</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="our-services">
+        <div class="container">
+            <h1 class="section-heading">Our Services</h1>
+            <div class="card-wrapper flex">
+                  <div class="service-card magic-shadow-sm">
+                    <img class="transport-icon" src="../icons/transport.svg" alt="">
+                    <h2>Free Home Delivery</h2>
+                    <p>Enjoy the convenience of free home delivery! Get your favorite products delivered straight to your doorstep at no extra cost.</p>
+                    <button class="btn btn-secondary">Read More</button>
+                  </div>
+                  <div class="service-card magic-shadow-sm">
+                    <img class="transport-icon" src="../icons/bag.svg" alt="">
+                    <h2 class="text-primary">14-Days Return Services</h2>
+                    <p>Shop confidently with our hassle-free 14-day return policy. Not satisfied with your purchase? No problem! Return it within 14 days for a full refund or exchange. Your satisfaction is our priority.</p>
+                    <button class="btn btn-primary">Read More</button>
+                  </div>
+                  <div class="service-card magic-shadow-sm">
+                    <img class="transport-icon" src="../icons/usd.svg" alt="">
+                    <h2>Money Back Guaranted</h2>
+                    <p>Rest easy with our money-back guarantee. If you're not satisfied with your purchase, we'll refund your money, no questions asked. Your satisfaction is our commitment.</p>
+                    <button class="btn btn-secondary">Read More</button>
+                  </div>
+            </div>
+        </div>
+    </section>
+    
+
+    <footer>
+        <div class="container">
+            <div class="box">
+                <h3>About Us</h3>
+                 <p>This platform offering a wide range of products for convenient online shopping.</p>
+                 <button class="btn btn-secondary">Read More</button>
+            </div>
+            <div class="box">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li>
+                        <a href="../htmlfiles/home.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="#">Shop</a>
+                    </li>
+                    <li>
+                        <a href="../htmlfiles/contact.html">Contact Us</a>
+                    </li>
+                    <li>
+                        <a href="../htmlfiles/account.html">Profile</a>
+                    </li>
+                    <li>
+                        <a href="../htmlfiles/About_Us.html">About Us</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="box">
+                <h3>Follow Us</h3>
+                <ul>
+                    <li>
+                        <a href="www.facebook.com">
+                            <img src="../icons/facebook.svg" alt="">
+                            <span>Facebook</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="www.twitter.com">
+                            <img src="../icons/twitter.svg" alt="">
+                            <span>Twitter</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="www.google.com">
+                            <img src="../icons/google.svg" alt="">
+                            <span>Google</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="www.instagram.com">
+                            <img src="../icons/instagram.svg" alt="">
+                            <span>Instagram</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <footer class="Copyright">
+        
+    </footer>
+
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="../js/first.js"></script>
+    <script>
+        function addToCart() {
+            // Get product information
+            var productName = document.querySelector('.add').textContent;
+            var productPrice = parseFloat(document.querySelector('.price').textContent.replace('Price: ₹', ''));
+            var productSize = ""; // Size information not available in the provided HTML
+            var productQuantity = 1; // Default quantity is 1
+            var productImage = document.getElementById('productImage').getAttribute('src'); // Get product image URL
+            
+            // Create product object
+            var product = {
+                name: productName,
+                price: productPrice,
+                size: productSize,
+                quantity: productQuantity,
+                image: productImage
+            };
+            
+            // Send product data to server
+            fetch('/addToCart', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(product),
+            })
+            .then(response => {
+                if (response.ok) {
+                    console.log('Product added to cart successfully.');
+                    window.location.href = 'cart.html'; // Redirect to cart page
+                } else {
+                    console.error('Error adding product to cart.');
+                }
+            })
+            .catch(error => console.error('Error:', error));
+        }
+    </script>
+    
+    
+
+
+    
+</body>
+</html>

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta tags, title, and CSS links -->
+    <style>
+        /* CSS for cart container */
+        .container1 {
+            position: relative; /* Make sure the brand logo is positioned relative to this */
+            max-width: 800px;
+            margin: 100px auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+        body {
+            background: linear-gradient(45deg,#87adfe,#ff77cd);
+        }
+        .container1 h1 {
+            text-align: center;
+            color: red;
+        }
+        /* CSS for cart item */
+        .cart-item {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        .cart-item:hover {
+            transform: translateY(-5px);
+        }
+        .cart-item img {
+            width: 150px;
+            height: auto;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+        .cart-item-details {
+            flex-grow: 1;
+            padding: 0 20px;
+            font-size: 1rem;
+            margin-right: -200px; /* Expand to fill available space */
+        }
+        .cart-item-details p {
+            margin: 5px 0;
+        }
+        .cart-item-details p:first-child {
+            font-weight: bold;
+            font-size: 22px;
+        }
+        .cart-total {
+            margin-top: 20px;
+            text-align: right;
+        }
+        .cart-total h3 {
+            font-size: 20px;
+            margin: 0;
+        }
+        .btn {
+            background-color: #0dd12d;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .btn:hover {
+            background-color: #ff1493;
+        }
+    </style>
+</head>
+<body>
+    <!-- Cart container -->
+    <div class="container1">
+        <div>
+            <h1>Your Cart</h1>
+            <div class="cart-items" id="cartItems">
+                <!-- Cart items will be dynamically added here -->
+            </div>
+            <div class="cart-total">
+                <h3>Total: <span id="total-price">₹0.00</span></h3>
+                <button id="checkout-btn" class="btn">Proceed For Payment</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Function to split the product name into chunks of 8 words
+        function splitProductName(name) {
+            const words = name.split(' ');
+            const chunks = [];
+            for (let i = 0; i < words.length; i += 6) {
+                chunks.push(words.slice(i, i + 6).join(' '));
+            }
+            return chunks.join('<br>');
+        }
+
+        // Function to fetch product items from the database
+        async function fetchCartItems() {
+            try {
+                const response = await fetch('/Products');
+                const data = await response.json();
+                const products = data.products;
+                
+                // Display fetched product items in the cart container
+                const cartItemsContainer = document.getElementById('cartItems');
+                products.forEach(product => {
+                    const cartItemElement = document.createElement('div');
+                    cartItemElement.classList.add('cart-item');
+    
+                    const img = document.createElement('img');
+                    img.src = product.image;
+                    img.alt = product.name;
+                    cartItemElement.appendChild(img);
+    
+                    const detailsContainer = document.createElement('div');
+                    detailsContainer.classList.add('cart-item-details');
+                    const details = document.createElement('div');
+                    details.innerHTML = `
+                        <p>Name: ${splitProductName(product.name)}</p>
+                        <p>Price: ₹${product.price.toFixed(2)}</p>
+                        <p>Quantity: ${product.quantity}</p>
+                    `;
+                    detailsContainer.appendChild(details);
+                    cartItemElement.appendChild(detailsContainer);
+                    
+                    cartItemsContainer.appendChild(cartItemElement);
+                });
+    
+                // Calculate and display total amount
+                const totalPriceSpan = document.getElementById('total-price');
+                const totalAmount = products.reduce((acc, product) => acc + product.price, 0);
+                totalPriceSpan.textContent = '₹' + totalAmount.toFixed(2);
+            } catch (error) {
+                console.error('Error fetching product items:', error);
+            }
+        }
+    
+        // Call fetchCartItems function when the page loads
+        fetchCartItems();
+    </script>
+</body>
+</html>

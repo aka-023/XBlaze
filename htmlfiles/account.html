@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XBlaze</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../cssfiles/accountcss.css">
+    <script src="https://kit.fontawesome.com/28f828d15e.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header class="topbar">
+        <div class="container">
+            <div class="icons">
+                <a href="www.facebook.com"><i class="fa-brands fa-facebook"  style="color: lightseagreen;"></i></a>
+                <a href="www.instagram.com"><i class="fa-brands fa-instagram" style="color: lightseagreen;"></i></a>
+                <a href="www.twitter.com"><i class="fa-brands fa-twitter" style="color: lightseagreen;"></i></a>
+                <a href="www.googleplus.com"><i class="fa-brands fa-google-plus" style="color: lightseagreen;"></i></a>
+                <a href="www.youtube.com"><i class="fa-brands fa-youtube" style="color: lightseagreen;"></i></a>
+            </div>
+            <div class="auth">
+                <div>
+                    <img src="../icons/user.png" alt="">
+                    <a href="../htmlfiles/signup.html">Logout</a>
+                </div>
+                <span class="divider">|</span>
+                <div>
+                    <img src="../icons/shopping-cart.png" alt="">
+                    <a href="../htmlfiles/cart.html">Cart</a>
+                </div>
+                
+            </div>
+        </div>
+    </header>
+
+    <nav>
+        <div class="top">
+            <div class="container">
+                <div class="contact">
+                    <img src="../icons/callicon.svg" alt="">
+                    <div>
+                        <h5>Call Us: (+91)4546551514 </h5>
+                        <h6>E-mail : xblaze2024@gmail.com</h6>
+                    </div>
+                </div>
+                <div class="logo">
+                    <img src="../Images/vblaze-logo.png" alt="XBlaze">
+                </div>
+                <div class="time">
+                    <img src="../icons/clockicon.svg" alt="">
+                    <div>
+                        <h5>Working Hours :</h5>
+                        <h5>24*7</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="navbar magic-shadow">
+            <div class="container">
+                <div>
+                    <a href="../htmlfiles/home.html">Home</a>
+                </div>
+                <div>
+                    <a href="../htmlfiles/About_Us.html">About Us</a>
+                </div>
+                <div>
+                    <a href="../htmlfiles/Shoppage.html">Shop</a>
+                </div>
+                <div>
+                    <a href="../htmlfiles/contact.html">Contact Us</a>
+                </div>
+                <div>
+                    <a href="../htmlfiles/account.html" class="active">Profile</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="main">
+    <div class="container1">
+        <div class="leftbox">
+            <nav>
+                <a onclick="tabs(0)" class="tab active">
+                    <i class="fa fa-user"></i>
+                </a>
+                <a onclick="tabs(1)" class="tab">
+                    <i class="fa fa-credit-card"></i>
+                </a>
+                <a onclick="tabs(2)" class="tab">
+                    <i class="fa fa-tasks"></i>
+                </a>
+                <a onclick="tabs(3)" class="tab">
+                    <i class="fa fa-cog"></i>
+                </a>
+            </nav>
+        </div>
+        <div class="rightbox">
+            <div class="profile tabshow">
+                <form action="/prof" method="POST">
+                <h1>Personal Information</h1>
+                <h2>Full Name</h2>
+                <!-- <input type="text" id="full_name" name="full_name"> -->
+                <input type="text" id="full_name" name="full_name" value="${user.usr_name}">
+                <h2>Birthday</h2>
+                <!-- <input type="date" id="birth_date" name="birth_date"> -->
+                <input type="date" id="birth_date" name="birth_date" value="${user.DOB}">
+                <h2>Gender</h2>
+                <!-- <input type="radio" id="gend" name="gend">Female<br> -->
+                <!-- <input type="text" id="gend" name="gend"> -->
+                <input type="text" id="gend" name="gend" value="${user.Gender}">
+                <h2>Email</h2>
+                <!-- <input type="email" id="usr_mail" name="usr_mail"> -->
+                <input type="email" id="usr_mail" name="usr_mail" value="${user.Email}">
+                <!-- <h2>Password</h2>
+                <input type="password" class="input"><br> -->
+                <br>
+                <button class="btn" type="submit" value="submit">Update</button>
+            </form>
+            </div>
+       
+            <div class="payment tabshow">
+            <h1>Payment Information</h1>
+        <h2>Card Type</h2>  
+            <select name="card_type" id="card_type" class="card_" style="padding: 0.5rem; margin: 0.5rem; width: 85%; border-color: rgb(92, 196, 198); border-radius: 0.5rem;" required>
+                <option value="">--Select a Card Type--</option>
+                <option value="visa">Visa</option>
+                <option value="rupay">RuPay</option>
+                <option value="Master_card">Master Card</option>
+                <option value="UPI">UPI</option>
+            </select>
+            <h2> Card Number</h2>
+            <input type="text" name="Card_number" id="Card_number" required>
+            <h2>Expiration Date</h2>
+             <input type="date" name="exp" id="exp" required>
+            <h2>CVV</h2>
+            <input type="password" name="cvv" id="cvv" required><br>
+        <button class="btn">Update
+        </button>
+        </div>
+        <div class="privacy tabshow">
+            <h1>Privacy Settings</h1>
+            <h2>Manage email Notification</h2>
+            <h2>Manage Privacy Settings</h2>
+            <h2>View Terms of Use</h2>
+            <h2>Personal Ad Experience</h2>
+            <h2>Protect Account</h2>
+            <button class="btn">Update
+            </button>
+        </div>
+        <div class="settings tabshow">
+            <!-- <h1>Account Settings</h1>
+            <h3 style="display: inline;">Notifications</h3>
+            <input type="checkbox" name="Notification" id="Notifi" checked>
+            <p>This will not affect any order updates</p>
+            <h3>Optimized Experience</h3>
+            <p>For internet connection quality</p>
+            <h3 style="display: inline;">Optimized Image Quality</h3>
+            <input type="checkbox" name="Image" id="Image">
+            <h3 style="display: inline;">Optimized Checkout flow</h3>
+            <input type="checkbox" name="Checkout" id="Checkout"> -->
+
+            <h1>Account Settings</h1>
+                <h3>Notifications</h3>
+                <div class="one"  style="display: flex;">
+                    <div style="padding: 1rem; margin-top: 0.6rem;">
+                    <input type="checkbox" name="Notification" id="Notifi" checked>                        
+                    </div>
+                    <div>
+                    <p>This will not affect any order updates</p>
+                    </div>
+                </div>
+                <h3>Optimized Image Quality</h3>
+                <div class="one"  style="display: flex;">
+                    <div style="padding: 1rem; margin-top: 0.6rem;">
+                    <input type="checkbox" name="Notification" id="Notifi" checked>                        
+                    </div>
+                    <div>
+                    <p>Check this box to get 4k image quality</p>
+                    </div>
+                </div>
+                <h3>Optimized Checkout flow</h3>
+                <div class="one"  style="display: flex;">
+                    <div style="padding: 1rem; margin-top: 0.6rem;">
+                    <input type="checkbox" name="Notification" id="Notifi" checked>                        
+                    </div>
+                    <div>
+                    <p>Check this box to make seamless payments</p>
+                    </div>
+                </div>
+        </div>
+        </div>
+    </div>
+</div>
+    <footer>
+        <div class="container">
+            <div class="about box">
+                <div class="head">
+                    <h3>About Us</h3>
+                </div>
+                <div class="text">
+                    This platform offering a wide range of products for convenient online shopping.
+                </div>
+                <div class="but">
+                    <button class="btn btn-secondary">Read More</button>
+                </div>
+            </div>
+            <div class="box">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li>
+                        <a href="../htmlfiles/home.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="#">Shop</a>
+                    </li>
+                    <li>
+                        <a href="../htmlfiles/contact.html">Contact Us</a>
+                    </li>
+                    <li>
+                        <a href="../htmlfiles/account.html">Profile</a>
+                    </li>
+                    <li>
+                        <a href="../htmlfiles/About_Us.html">About Us</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="follow box">
+                <h3>Follow Us</h3>
+                <ul>
+                    <div>
+                        <li>
+                            <a href="www.facebook.com">
+                                <img src="../icons/facebook.svg" alt="">
+                                <span>Facebook</span>
+                            </a>
+                        </li>
+                    </div>
+
+                    <div>
+                        <li>
+                            <a href="www.twitter.com">
+                                <img src="../icons/twitter.svg" alt="">
+                                <span>Twitter</span>
+                            </a>
+                        </li>
+                    </div>
+                    
+                    <div>
+                        <li>
+                            <a href="www.google.com">
+                                <img src="../icons/google.svg" alt="">
+                                <span>Google</span>
+                            </a>
+                        </li>
+                    </div>
+                    
+                    <div>
+                        <li>
+                            <a href="www.instagram.com">
+                                <img src="../icons/instagram.svg" alt="">
+                                <span>Instagram</span>
+                            </a>
+                        </li>
+                    </div>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <footer class="Copyright">
+        
+    </footer>
+
+    <script>
+        // Function to get URL parameters
+        function getUrlParameter(name) {
+            name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+            var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+            var results = regex.exec(location.search);
+            return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+        };
+      
+        // Get email and password from URL parameters
+        var fullname = getUrlParameter('fullname');
+        //console.log(fullname);
+        var birth = getUrlParameter('birth');
+        //console.log(birth);
+        var email = getUrlParameter('email');
+        var gender = getUrlParameter('gender')
+        
+        //console.log(email);
+        // Update <p> tags with email and password
+        document.getElementById('usr_mail').value = email;
+        document.getElementById('full_name').value = fullname;
+        document.getElementById('birth_date').value = birth;
+        document.getElementById('gend').value = gender;
+
+
+      </script>
+    <script src="jquery.js"></script>
+    <script src="../js/accountpage.js"></script>
+</body>
+</html>

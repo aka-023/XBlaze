@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>XBlaze</title>
+  <link rel="stylesheet" href="../cssfiles/styles.css">
+  <link rel="stylesheet" type="text/css" href="../cssfiles/contact.css">
+  <style>
+    /* Additional CSS styles for the integrated header */
+    .topbar {
+      background-color: #333;
+      color: #fff;
+      padding: 10px 0;
+    }
+
+    .topbar .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .topbar .icons a {
+      color: #fff;
+      margin-right: 10px;
+    }
+
+    .topbar .auth div {
+      display: flex;
+      align-items: center;
+    }
+
+    .topbar .auth div img {
+      margin-right: 5px;
+    }
+
+    .topbar .divider {
+      margin: 0 10px;
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+  <!-- Integrated Header -->
+  <header class="topbar">
+    <div class="container">
+      <div class="icons">
+        <a href=""><i class="fa-brands fa-facebook"></i></a>
+        <a href=""><i class="fa-brands fa-instagram"></i></a>
+        <a href=""><i class="fa-brands fa-twitter"></i></a>
+        <a href=""><i class="fa-brands fa-google-plus"></i></a>
+        <a href=""><i class="fa-brands fa-youtube"></i></a>
+      </div>
+      <div class="auth">
+        <div>
+          <img src="../icons/user.png" alt="">
+          <a href="../htmlfiles/signup.html">Login</a>
+        </div>
+        <span class="divider">|</span>
+        <div>
+          <img src="../icons/shopping-cart.png" alt="">
+          <a href="">Cart</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Existing Banner Header -->
+  <header>
+    <img class="img1" src="../Images/img1.jpg" alt="Banner1 Image" width="122" height="100" >
+    <img class="img2" src="../Images/img2.jpg" alt="Banner2 Image" width="122" height="100" >
+    <img class="img3" src="../Images/img3.jpg" alt="Banner3 Image" width="122" height="100" >
+    <img class="img4" src="../Images/img4.jpg" alt="Banner4 Image" width="122" height="100" >
+    <img class="img5" src="../Images/img5.jpg" alt="Banner5 Image" width="122" height="100" >
+    <img class="img6" src="../Images/img6.jpg" alt="Banner6 Image" width="122" height="100" >
+    <img class="img7" src="../Images/img7.jpg" alt="Banner7 Image" width="122" height="100" >
+    <img class="img8" src="../Images/img8.jpg" alt="Banner8 Image" width="122" height="100" >
+    <img class="img9" src="../Images/img9.jpg" alt="Banner9 Image" width="122" height="100" >
+    <img class="img10" src="../Images/img10.jpg" alt="Banner10 Image" width="122" height="100" >
+    <img class="img11" src="../Images/img11.jpg" alt="Banner11 Image" width="122" height="100" >
+    <!-- Banner images -->
+  </header>
+
+  <!-- Existing Connect With Us Header -->
+  <header>
+    <h1 style="background-color: rgb(180, 173, 173);top:-230px; border-style: ridge; animation: fadeIn 1s ease-in-out; position: relative; border-radius: 50px 15px 50px 15px; text-transform: unset; text-rendering: geometricPrecision;">Connect With Us</h1>
+  </header>
+
+  <!-- Existing Content -->
+  <div class="container">
+    <section class="contact-info">
+        <h2>Contact Information</h2>
+        <ul>
+          <li><p>Email: <a href="mailto:xblaze@gmail.com">xblaze@gmail.com</a></p></li>
+          <li><p>Phone: <a href="tel:18001234567">1-800-123-4567</a></p></li>
+          <li><p>Hours: Monday - Friday, 9:00 AM - 6:00 PM (GMT)</p></li>
+        </ul>
+      </section>
+      <section class="contact-form">
+        <h2>Contact Form</h2>
+        <form id="contactForm" action="/contact" method="POST">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="subject">Subject:</label>
+                <input type="text" id="subject" name="subject" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+     <!-- Contact Information and Form  -->
+  </div>
+
+  <!-- Existing Footer -->
+  <footer>
+    <div class="container3">
+        <div class="box">
+          <h3>About Us</h3>
+          <p>This platform offers a wide range of products for convenient online shopping.</p>
+          <button class="btn btn-secondary">Read More</button>
+        </div>
+        <div class="box">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="../htmlfiles/home.html">Home</a></li>
+            <li><a href="#">Shop</a></li>
+            <li><a href="../htmlfiles/contact.html">Contact Us</a></li>
+            <li><a href="../htmlfiles/account.html">Profile</a></li>
+            <li><a href="../htmlfiles/About_Us.html">About Us</a></li>
+          </ul>
+        </div>
+        <div class="box">
+          <h3>Follow Us</h3>
+          <ul>
+            <li>
+              <a href="#">
+                <img src="../icons/facebook.svg" alt="">
+                <span>Facebook</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="../icons/twitter.svg" alt="">
+                <span>Twitter</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="../icons/google.svg" alt="">
+                <span>Google</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="../icons/instagram.svg" alt="">
+                <span>Instagram</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    <!-- Footer content -->
+  </footer>
+  <script>
+    document.getElementById("contactForm").addEventListener("submit", async (event) => {
+      event.preventDefault(); // Prevent default form submission
+      
+      // Get form data
+      const formData = new FormData(event.target);
+      const data = {};
+      formData.forEach((value, key) => {
+        data[key] = value;
+      });
+  
+      // Send form data to server
+      try {
+        const response = await fetch("/contact", { // Corrected endpoint
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify(data)
+        });
+        
+        if (response.ok) {
+          console.log("Form submitted successfully!");
+          // Redirect or display success message as needed
+        } else {
+          console.error("Failed to submit form");
+          // Handle error case
+        }
+      } catch (error) {
+        console.error("Error submitting form:", error);
+        // Handle error case
+      }
+    });
+  </script>
+
+  <!-- Existing Copyright Footer -->
+  <footer class="Copyright">
+    <!-- Copyright content -->
+  </footer>
+
+  <script src="../js/script.js"></script>
+</body>
+</html>

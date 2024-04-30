@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XBlaze</title>
+    <link rel="stylesheet" type="text/css" href="../cssfiles/signin.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="form-wrapper sign-in">
+            <form action="/log" method="POST" >
+                <h2>Login</h2>
+                <div class="input-group">
+                    <input type="text" id="username" name="username" required>
+                    <label for="username">Username</label>
+                </div>
+                <div class="input-group">
+                    <input type="password" id="user_pass" name="user_pass" required>
+                    <label for="user_pass">Password</label>
+                </div>
+                <div class="remember">
+                    <label><input type="checkbox"> Remember Me</label>
+                </div>
+                <button type="submit" value="Submit" >Login</button>
+                <div class="signUp-link">
+                    <p>Don't have an account? <a href="#" class="signUpBtn-link">Sign Up</a></p>
+                </div>
+            </form>
+        </div>
+
+
+        <div class="form-wrapper sign-up">
+            <form action="/signup" method="POST">
+                <h2>Sign Up</h2>
+                <div class="input-group">
+                    <input type="text" id="usr_name" name="usr_name" required>
+                    <label for="usr_name">Username</label>
+                </div>
+                <div class="input-group" id="email" name="email">
+                    <input type="email" id="usr_mail" name="usr_mail" required>
+                    <label for="usr_mail">Email<i class="material-icons">&#xe0be;</i></label>
+                    
+                </div>
+                <div class="input-group">
+                    <input type="password" name="usr_pass" id="usr_pass" required minlength="6">
+                    <label for="usr_pass">Password</label>
+                </div>
+                <div class="remember">
+                    <label><input type="checkbox">I agree to the terms & conditions </label>
+                </div>
+                <button type="submit" value="submit" >Sign Up</button>
+                <div class="signUp-link">
+                    <p>Already have an account? <a href="#" class="signInBtn-link">Sign In</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+    
+</body>
+<script src="../js/signinup.js"></script>
+</html>
